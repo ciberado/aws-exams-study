@@ -217,23 +217,73 @@
 
 ## 11. Evaluation Methods
 
-### 11.1 Evaluation Approaches
-- **Human Evaluation**: People assess quality, relevance, and usefulness
-- **Benchmark Datasets**: Standardized test sets for objective comparison
+### 11.1 NLP and Generative AI Metrics
 
-### 11.2 Performance Metrics
-- **ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**: Measures summarization quality
-- **BLEU (Bilingual Evaluation Understudy)**: Assesses translation quality
-- **BERTScore**: Evaluates semantic similarity using contextual embeddings
+#### Text Generation Quality
+- **ROUGE (Recall-Oriented Understudy for Gisting Evaluation)**: Measures summarization quality through n-gram overlap. *Example: Evaluating news article summaries*
+- **BLEU (Bilingual Evaluation Understudy)**: Assesses translation quality via n-gram precision. *Example: Comparing machine translations to human references*
+- **METEOR (Metric for Evaluation of Translation with Explicit ORdering)**: Similar to BLEU but incorporates synonyms and stemming. *Example: Translation evaluation with more flexible matching*
+- **CIDEr (Consensus-based Image Description Evaluation)**: Consensus-based metric often used for image captioning. *Example: Evaluating AI-generated image descriptions*
+- **Perplexity**: Measures how well a language model predicts text (lower is better). *Example: Comparing different language models' quality*
+- **MAUVE (Measuring the gap between neural text And hUman text using diVErgence frontiers)**: Compares distributions between human and generated text. *Example: Assessing realism of AI-generated stories*
+
+#### Semantic Similarity
+- **BERTScore**: Evaluates semantic similarity using contextual embeddings from BERT (Bidirectional Encoder Representations from Transformers). *Example: Checking if paraphrased text preserves meaning*
+- **MoverScore**: BERTScore variant using Earth Mover's Distance. *Example: Fine-grained semantic similarity in summarization*
+- **BARTScore**: Uses BART (Bidirectional and Auto-Regressive Transformers) model for evaluation. *Example: Evaluating text generation quality*
+- **Cosine Similarity**: Measures angle between vector representations. *Example: Finding similar documents in search*
+
+#### Task-Specific Metrics
+- **EM (Exact Match)**: Binary measure of perfect answer matching (question answering). *Example: Evaluating factual QA systems where precision matters*
+- **F1 Score**: Harmonic mean of precision and recall (question answering, classification). *Example: Balancing precision/recall in spam detection*
+- **mAP (Mean Average Precision)**: Ranking quality for information retrieval and object detection. *Example: Evaluating search engine result rankings*
+
+#### Image Generation Quality
+- **IS (Inception Score)**: Measures quality and diversity of generated images. *Example: Evaluating GAN-generated images*
+- **FID (Fréchet Inception Distance)**: Compares distribution of generated vs real images. *Example: Comparing quality of different image generation models*
+
+#### Human-Aligned Evaluation
+- **Human Evaluation Scores**: Direct human ratings of quality, relevance, and usefulness. *Example: User studies for chatbot responses*
+- **LLM-as-Judge (Large Language Model as Judge)**: Using strong models (GPT-4, Claude) to evaluate outputs. *Example: Evaluating creative writing quality at scale*
+- **Preference Rankings**: Elo ratings or pairwise comparisons. *Example: Ranking chatbot responses by user preference*
+- **Benchmark Datasets**: Standardized test sets for objective comparison. *Example: Testing models on GLUE or SuperGLUE*
+
+### 11.2 Traditional ML Metrics
+
+#### Regression Metrics
+- **R² (R-squared / Coefficient of Determination)**: Proportion of variance explained by the model (0 to 1). *Example: Predicting house prices*
+- **MSE (Mean Squared Error)**: Average squared difference between predictions and actual values. *Example: Time series forecasting where large errors are costly*
+- **RMSE (Root Mean Squared Error)**: Square root of MSE, in original units. *Example: Weather temperature predictions*
+- **MAE (Mean Absolute Error)**: Average absolute difference between predictions and actual values. *Example: Sales forecasting where all errors are equally important*
+- **MAPE (Mean Absolute Percentage Error)**: MAE expressed as percentage. *Example: Comparing forecast accuracy across different scales*
+
+#### Classification Metrics
+- **Accuracy**: Proportion of correct predictions. *Example: Balanced binary classification like coin flip prediction*
+- **Precision**: True positives / (True positives + False positives). *Example: Email spam detection where false positives are costly*
+- **Recall (Sensitivity / True Positive Rate)**: True positives / (True positives + False negatives). *Example: Disease screening where missing cases is critical*
+- **F1 Score**: Harmonic mean of precision and recall. *Example: Imbalanced fraud detection*
+- **AUC-ROC (Area Under the Curve - Receiver Operating Characteristic)**: Area under the receiver operating characteristic curve. *Example: Evaluating binary classifiers across all thresholds*
+- **AUC-PR (Area Under the Curve - Precision-Recall)**: Area under the precision-recall curve. *Example: Imbalanced datasets like rare disease detection*
+- **Confusion Matrix**: Table showing true/false positives and negatives. *Example: Understanding all types of classification errors*
+
+#### Clustering Metrics
+- **Silhouette Score**: Measures how similar objects are to their own cluster vs other clusters. *Example: Evaluating customer segmentation quality*
+- **Davies-Bouldin Index**: Ratio of within-cluster to between-cluster distances. *Example: Choosing optimal number of clusters*
+- **Calinski-Harabasz Index**: Ratio of between-cluster to within-cluster variance. *Example: Comparing different clustering algorithms*
+
+#### Ranking Metrics
+- **NDCG (Normalized Discounted Cumulative Gain)**: Measures ranking quality with position weighting. *Example: Evaluating search engine rankings where top results matter most*
+- **MRR (Mean Reciprocal Rank)**: Average of reciprocal ranks of first relevant result. *Example: Question answering where first correct answer is key*
 
 ### 11.3 Business Objective Assessment
-- **Productivity**: Whether solution increases efficiency
-- **User Engagement**: How actively users interact with system
-- **Task Engineering**: Effectiveness in accomplishing intended goals
-- **Cross-domain Performance**: Ability to handle varied tasks
-- **Conversion Rate**: Success in driving desired user actions
-- **Average Revenue per User**: Financial impact per customer
-- **Customer Lifetime Value**: Long-term customer worth
+- **Productivity**: Whether solution increases efficiency. *Example: Measuring time saved by automation tool*
+- **User Engagement**: How actively users interact with system. *Example: Daily active users of a recommendation system*
+- **Task Engineering**: Effectiveness in accomplishing intended goals. *Example: Success rate of AI assistant completing user tasks*
+- **Cross-domain Performance**: Ability to handle varied tasks. *Example: Chatbot handling customer service across departments*
+- **Conversion Rate**: Success in driving desired user actions. *Example: Percentage of users completing purchases after AI recommendations*
+- **ARPU (Average Revenue Per User)**: Financial impact per customer. *Example: Revenue generated per subscriber using AI features*
+- **CLV (Customer Lifetime Value)**: Long-term customer worth. *Example: Projected value of customers retained by AI support*
+- **ROI (Return on Investment)**: Financial return relative to implementation cost. *Example: Revenue increase vs AI development costs*
 
 ## 12. Responsible AI
 

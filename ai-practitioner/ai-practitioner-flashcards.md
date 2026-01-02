@@ -136,6 +136,102 @@ A: Cost per user, development costs, customer feedback, ROI (return on investmen
 **Q: Why evaluate both technical and business metrics?**
 A: Technical metrics assess model performance, but business metrics determine if the solution delivers actual value, justifies costs, and meets organizational objectives.
 
+**Q: What does ROUGE measure and when is it used?**
+A: ROUGE (Recall-Oriented Understudy for Gisting Evaluation) measures summarization quality through n-gram overlap. Used to evaluate news article summaries and other text summarization tasks.
+
+**Q: What is the difference between BLEU and METEOR?**
+A: Both evaluate translation quality, but BLEU measures n-gram precision while METEOR incorporates synonyms and stemming for more flexible matching of translated text.
+
+**Q: What does perplexity measure in language models?**
+A: Perplexity measures how well a language model predicts text. Lower perplexity indicates better prediction quality and is used to compare different language models.
+
+**Q: What is MAUVE used for?**
+A: MAUVE (Measuring the gap between neural text And hUman text using diVErgence frontiers) compares distributions between human and generated text. Used to assess realism of AI-generated stories.
+
+**Q: What is CIDEr and when is it used?**
+A: CIDEr (Consensus-based Image Description Evaluation) is a consensus-based metric often used for evaluating AI-generated image captions and descriptions.
+
+**Q: What is BERTScore used for?**
+A: BERTScore evaluates semantic similarity using contextual embeddings from BERT. Used to check if paraphrased text preserves meaning or to evaluate text generation quality.
+
+**Q: What are MoverScore and BARTScore?**
+A: MoverScore is a BERTScore variant using Earth Mover's Distance for fine-grained semantic similarity. BARTScore uses BART model for evaluating text generation quality.
+
+**Q: What does cosine similarity measure?**
+A: Cosine similarity measures the angle between vector representations. Used for finding similar documents in search or comparing embeddings in recommendation systems.
+
+**Q: Explain the difference between Exact Match (EM) and F1 score.**
+A: EM is a binary measure requiring perfect answer matching (used in factual QA). F1 score is the harmonic mean of precision and recall, balancing both metrics (used in classification and QA).
+
+**Q: What is mAP used for?**
+A: mAP (Mean Average Precision) measures ranking quality for information retrieval and object detection. Used to evaluate search engine result rankings.
+
+**Q: What do Inception Score (IS) and FID measure?**
+A: Both evaluate image generation quality. IS measures quality and diversity of generated images. FID compares the distribution of generated images versus real images.
+
+**Q: What is LLM-as-Judge evaluation?**
+A: Using strong language models (like GPT-4 or Claude) to evaluate AI outputs at scale. Used for evaluating creative writing quality or other subjective tasks where human evaluation is expensive.
+
+**Q: What are preference rankings in AI evaluation?**
+A: Methods like Elo ratings or pairwise comparisons where users choose between options. Used to rank chatbot responses by user preference.
+
+**Q: What are benchmark datasets?**
+A: Standardized test sets for objective comparison of models. Examples include GLUE or SuperGLUE for testing language model performance.
+
+**Q: What is R² and what does it tell us?**
+A: R² (R-squared or Coefficient of Determination) is the proportion of variance explained by a regression model, ranging from 0 to 1. Higher values mean better fit. Used in tasks like house price prediction.
+
+**Q: What does MSE measure?**
+A: MSE (Mean Squared Error) is the average squared difference between predictions and actual values. Penalizes large errors heavily. Used in time series forecasting where large errors are costly.
+
+**Q: What is the difference between RMSE and MAE?**
+A: RMSE (Root Mean Squared Error) is MSE in original units, penalizing large errors more. MAE (Mean Absolute Error) treats all errors equally. Use RMSE when large errors matter more, MAE when all errors are equally important.
+
+**Q: When should you use MAPE?**
+A: MAPE (Mean Absolute Percentage Error) expresses MAE as a percentage, useful for comparing forecast accuracy across different scales (e.g., forecasting products with different price ranges).
+
+**Q: What is the difference between precision and recall?**
+A: Precision = True Positives / (True Positives + False Positives) - minimizes false alarms. Recall = True Positives / (True Positives + False Negatives) - minimizes missed detections.
+
+**Q: When should you prioritize precision over recall?**
+A: Prioritize precision when false positives are costly, such as spam detection (don't want legitimate emails marked as spam). Prioritize recall when missing positive cases is critical, such as disease screening.
+
+**Q: What is the difference between accuracy and F1 score?**
+A: Accuracy is the proportion of correct predictions (good for balanced datasets). F1 score is the harmonic mean of precision and recall (better for imbalanced datasets like fraud detection).
+
+**Q: What does AUC-ROC measure?**
+A: AUC-ROC (Area Under the Curve - Receiver Operating Characteristic) measures classifier performance across all decision thresholds. Used to evaluate binary classifiers independent of threshold choice.
+
+**Q: Why use AUC-PR instead of AUC-ROC?**
+A: AUC-PR (Precision-Recall curve) is better for imbalanced datasets like rare disease detection, as it focuses on the positive class performance rather than true negative rate.
+
+**Q: When should you use a confusion matrix?**
+A: Use a confusion matrix when you need to understand all types of classification errors (true/false positives and negatives). Provides complete picture of classifier performance beyond simple accuracy.
+
+**Q: What does the Silhouette Score measure?**
+A: Silhouette Score measures how similar objects are to their own cluster versus other clusters, ranging from -1 to 1. Used to evaluate customer segmentation quality and clustering effectiveness.
+
+**Q: What is the Davies-Bouldin Index?**
+A: Ratio of within-cluster to between-cluster distances. Lower values indicate better clustering. Used for choosing optimal number of clusters.
+
+**Q: What is the Calinski-Harabasz Index?**
+A: Ratio of between-cluster to within-cluster variance. Higher values indicate better-defined clusters. Used for comparing different clustering algorithms.
+
+**Q: What is NDCG and when is it used?**
+A: NDCG (Normalized Discounted Cumulative Gain) measures ranking quality with position weighting, giving more importance to top results. Used for search engine rankings where top positions matter most.
+
+**Q: What is Mean Reciprocal Rank (MRR)?**
+A: MRR is the average of reciprocal ranks of the first relevant result. Used in question answering systems where finding the first correct answer is most important.
+
+**Q: What business metrics assess AI system value?**
+A: Productivity (efficiency gains), User Engagement (interaction levels), Conversion Rate (desired actions), ARPU (Average Revenue Per User), CLV (Customer Lifetime Value), and ROI (Return on Investment).
+
+**Q: What is the difference between ARPU and CLV?**
+A: ARPU (Average Revenue Per User) measures financial impact per customer in a given period. CLV (Customer Lifetime Value) projects long-term customer worth over entire relationship with business.
+
+**Q: What is task engineering as a metric?**
+A: Effectiveness in accomplishing intended goals. Measures AI assistant's success rate in completing user tasks, not just accuracy of individual predictions.
+
 ---
 
 ## Domain 2: Fundamentals of Generative AI
